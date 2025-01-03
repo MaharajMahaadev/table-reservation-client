@@ -4,18 +4,19 @@ export default function Booked({ val, setVal, time, date }) {
   return (
     <>
       {val === 1 ? (
-        <div className="flex-col justify-evenly h-full p-5">
-          <p className="font-sans font-semibold text-xl text-green-500">
+        <div className="flex-col justify-evenly h-full p-5 bg-slate-100 rounded-lg">
+          <p className="font-sans grid grid-flow-col w-fit font-semibold text-xl text-green-500">
             <Check />
             Success
           </p>
           <p className="font-sans text-xl">
-            Successfully Reserved the table for the {date} and {time} slot.
+            Successfully Reserved the table for the date:{date} & time:{time}{" "}
+            slot.
           </p>
         </div>
       ) : (
-        <div className="flex-col justify-between h-full p-5">
-          <p className="font-sans font-semibold text-xl text-red-500">
+        <div className="flex-col justify-between h-full p-5 bg-slate-100 rounded-lg">
+          <p className="font-sans font-semibold grid grid-flow-col w-fit text-xl text-red-500">
             <X />
             Failed
           </p>
@@ -24,7 +25,10 @@ export default function Booked({ val, setVal, time, date }) {
           </p>
         </div>
       )}
-      <button className="bg-sky-200 p-3 rounded-full" onClick={() => setVal(0)}>
+      <button
+        className="bg-neutral-200 hover:bg-neutral-300 rounded-full p-3 m-1 duration-500"
+        onClick={() => setVal(0)}
+      >
         Go Home
       </button>
     </>

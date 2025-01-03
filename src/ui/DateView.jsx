@@ -6,6 +6,7 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import { format } from "date-fns";
+import { X } from "lucide-react";
 
 export default function DateView({ setShow, setDate, setTime }) {
   const currentDate = new Date();
@@ -103,8 +104,10 @@ export default function DateView({ setShow, setDate, setTime }) {
   };
 
   return (
-    <div className="p-4">
-      <button onClick={() => setShow(false)}>Close</button>
+    <div className="p-4 relative">
+      <button onClick={() => setShow(false)}>
+        <X size={36} className="text-red-500 absolute right-0 top-0 z-50 m-5" />
+      </button>
       {view === "calendar" && (
         <div>
           <h1 className="text-xl font-bold mb-4">Select a Date</h1>
