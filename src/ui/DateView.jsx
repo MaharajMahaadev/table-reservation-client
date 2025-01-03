@@ -7,7 +7,7 @@ import interactionPlugin from "@fullcalendar/interaction";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import { format } from "date-fns";
 
-export default function CalendarPage({ setShow, setDate, setTime }) {
+export default function DateView({ setShow, setDate, setTime }) {
   const currentDate = new Date();
   const [selectedDate, setSelectedDate] = useState(null);
   const [timeSlots, setTimeSlots] = useState([]);

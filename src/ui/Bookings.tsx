@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import DateView from "@/app/slots/page.jsx";
+import DateView from "@/ui/DateView.jsx";
 import Booked from "@/ui/Booked.jsx";
 
 export default function Bookings() {

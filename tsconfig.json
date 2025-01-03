@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/ui/page.jsx"
+    "src/ui/DateView.jsx"
   ],
   "exclude": ["node_modules"]
 }
