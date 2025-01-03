@@ -4,11 +4,6 @@ import { useState } from "react";
 import DateView from "@/ui/DateView.jsx";
 import Booked from "@/ui/Booked.jsx";
 
-type Mess = {
-  message: string;
-  disp: boolean;
-};
-
 export default function Bookings() {
   const [show, setShow] = useState(false);
   const [date, setDate] = useState("");
@@ -18,7 +13,7 @@ export default function Bookings() {
 
   const fetchBookedSlots = async () => {
     try {
-      const response = await fetch(
+      await fetch(
         "https://table-reservation-backend-4waq.onrender.com/reservations",
         {
           method: "POST",
@@ -32,7 +27,7 @@ export default function Bookings() {
       setVal(1);
     } catch (error) {
       setVal(2);
-      console.log("Error In Booking");
+      console.log("Error In Booking", error);
     }
   };
 
